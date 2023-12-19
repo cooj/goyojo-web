@@ -82,3 +82,27 @@ export default defineEventHandler(async (event) => {
 <!-- npx prisma db pull -->
 
 <!-- npx prisma db push -->
+
+## 四、上线部署至服务器（PM2）
+1、项目根目录下创建在`ecosystem.config.js`文件，使用PM2作为进程监控，应用程序发生错误时，PM2会自动重启进程
+```javascript
+module.exports = {
+    apps: [
+        {
+            name: 'nuxt-pro', // 设置PM2进程的名称
+            port: '8004',   // 项目运行的端口
+            exec_mode: 'cluster',
+            instances: 'max',
+            script: './.output/server/index.mjs',
+            env: {
+                // 数据库
+                DATABASE_URL: 'mysql://root:root@localhost:3306/nuxt-pro',  // 更改成实际的数据库
+            },
+        },
+    ],
+}
+```
+2、项目根目录执行命令：
+```bash
+pm2 start
+```
