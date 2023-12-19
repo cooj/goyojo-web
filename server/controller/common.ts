@@ -1,6 +1,5 @@
 import { extname } from 'node:path'
 import type { H3Event, MultiPartData } from 'h3'
-import { useCookie } from 'nuxt/app'
 
 export const uploadFile = async (event: H3Event) => {
     const dat = await getEventParams<{ file: MultiPartData }>(event)

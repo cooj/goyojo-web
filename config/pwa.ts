@@ -1,7 +1,6 @@
+import process from 'node:process'
 import type { ModuleOptions } from '@vite-pwa/nuxt'
 import { appDescription, appName } from './constant'
-
-const scope = '/'
 
 // export const pwa: ModuleOptions = {
 //     registerType: 'autoUpdate',
@@ -77,8 +76,7 @@ const scope = '/'
 //     },
 // }
 
-
-import process from 'node:process'
+const scope = '/'
 
 export const pwa: ModuleOptions = {
     registerType: 'autoUpdate',

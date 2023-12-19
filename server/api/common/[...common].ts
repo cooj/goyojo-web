@@ -14,7 +14,6 @@ router.use('/upload', defineEventHandler(async (event) => {
  * 接口测试
  */
 router.use('/test', defineEventHandler(async (event) => {
-
     return 123
 }))
 

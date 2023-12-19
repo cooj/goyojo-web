@@ -4,7 +4,7 @@
             <el-row :gutter="30">
                 <el-col :xs="4" :sm="4" :md="5" :lg="6" :xl="6">
                     <div class="side-item">
-                        <h3 class="co-main-bg-color p15px text-center text-20px font-bold c-white">
+                        <h3 class="co-main-bg-color p15px text-center text-20px c-white font-bold">
                             <ClientOnly>
                                 {{ $lang(activeMenu?.title, activeMenu?.title_en) }}
                             </ClientOnly>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="side-item mt20px">
-                        <h3 class="co-main-bg-color px15px py10px text-14px font-bold c-white">
+                        <h3 class="co-main-bg-color px15px py10px text-14px c-white font-bold">
                             <!-- {{ $t('contactName') }} -->
                             {{ $lang('联系我们', 'Contact us') }}
                         </h3>
@@ -47,7 +47,7 @@
                     </div>
                 </el-col>
                 <el-col :xs="20" :sm="20" :md="19" :lg="18" :xl="18">
-                    <div class="co-main-bg-color flex items-center px15px py10px text-14px font-bold c-white">
+                    <div class="co-main-bg-color flex items-center px15px py10px text-14px c-white font-bold">
                         <!-- {{ $t('site') }} -->
                         {{ $lang('当前位置', 'Location') }}：
                         <ClientOnly>

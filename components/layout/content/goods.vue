@@ -49,7 +49,7 @@ const initTableData = async () => {
 
     if (id.value) param.type = Number(id.value)
 
-    const { data, error } = await useCustomFetch<{ code: number; data: INewsResponseList; msg: string }>('/api/page/product', {
+    const { data, error } = await useCustomFetch<{ code: number, data: INewsResponseList, msg: string }>('/api/page/product', {
         method: 'post',
         body: param,
     })

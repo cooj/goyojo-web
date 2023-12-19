@@ -1,10 +1,8 @@
-## 洛泰仪器官网
+## goyojo官网
 
 基于 nuxt3 + element-plus + unocss + prisma 前端项目代码及api接口。前台使用vue渲染页面，服务端使用nitro + prisma 写api接口
 
 [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) - 项目最初使用模板
-
-
 
 ## Features
 
@@ -30,7 +28,6 @@
 
 - 📲 [PWA](https://github.com/vite-pwa/nuxt) with offline support and auto update behavior.
 
-
 ## Plugins
 
 ### Nuxt Modules
@@ -44,4 +41,3 @@
 ## IDE
 
 We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable Vetur if you have it).
-

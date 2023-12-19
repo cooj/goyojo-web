@@ -36,12 +36,10 @@ DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"
 npx prisma db pull
 ```
 
-
 #### 修改、创建模型,只要是对model有改动时，就要同步到数据库里，更新相应的表，同时typescript对应的类型也会更新
 ```bash
 npx prisma db push
 ```
-
 
 ## 四、 安装@prisma/client执行业务操作
 ```bash
@@ -81,11 +79,6 @@ export default defineEventHandler(async (event) => {
 })
 ```
 
-
-
-
 <!-- npx prisma db pull -->
 
 <!-- npx prisma db push -->
-
-

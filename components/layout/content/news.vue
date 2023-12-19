@@ -60,7 +60,7 @@ const defData = reactive({
 
 // 初始化数据
 const initTableData = async () => {
-    const { data, error } = await useCustomFetch<{ code: number; data: INewsResponseList; msg: string }>('/api/page/news', {
+    const { data, error } = await useCustomFetch<{ code: number, data: INewsResponseList, msg: string }>('/api/page/news', {
         method: 'post',
         body: {
             type: props.type,

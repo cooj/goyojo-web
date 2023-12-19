@@ -133,7 +133,7 @@ export const getGoodsList = async (event: H3Event) => {
  */
 export const getNewsInfo = async (event: H3Event) => {
     // 获取参数
-    const param = await getEventParams<{ id: number; type: number }>(event)
+    const param = await getEventParams<{ id: number, type: number }>(event)
 
     if (!param?.id) return null
     if (!param?.type) return null

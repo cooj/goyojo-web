@@ -116,7 +116,7 @@ export const getEventParams = async <T = any>(event: H3Event) => {
             if (item.type) {
                 param[item.name!] = item
             } else {
-                param[item.name!] = Buffer.from(item.data).toString() // eslint-disable-line n/prefer-global/buffer
+                param[item.name!] = Buffer.from(item.data).toString() // eslint-disable-line node/prefer-global/buffer
             }
         })
     } else if (method === 'GET') {
