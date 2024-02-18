@@ -29,7 +29,12 @@ export const useMenuState = () => {
 
     const getMenuList = async (update?: boolean) => {
         if (menuList.value.length) return menuList
-        const { data, error } = await useCustomFetch<IMenuListResponse[]>('/api/page/get_menu')
+        const { data, error } = await useCustomFetch<IMenuListResponse[]>('/api/page/get_menu', {
+            method: 'post',
+            body: {
+                status: 1,
+            },
+        })
 
         // 接口发生错误时
         if (error.value) return menuList
