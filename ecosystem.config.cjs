@@ -1,8 +1,8 @@
 module.exports = {
     apps: [
         {
-            name: 'nuxt-pro', // 设置PM2进程的名称
-            port: '8004', // 项目运行的端口
+            name: 'nuxt-web', // 设置PM2进程的名称
+            port: '7001', // 项目运行的端口
             exec_mode: 'cluster',
             instances: 'max',
             script: './.output/server/index.mjs',
