@@ -39,7 +39,7 @@ const systemInfo = await useSystemState().getSystemInfo()
 // console.log(dat)
 
 const menuList = await useMenuState().getMenuList()
-// console.log("🚀 ~ file: header.vue:21 ~ menuList:", menuList)
+// if(process.client) console.log("🚀 ~ file: header.vue:21 ~ menuList:", menuList)
 </script>
 
 <style lang="scss" scoped>
