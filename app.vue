@@ -17,7 +17,7 @@ import '~/assets/scss/default.scss'
 // import '~/assets/scss/app.scss'
 
 // const locale = ref(zhCn)
-// const systemInfo = await useSystemState().getSystemInfo()
+const systemInfo = await useSystemState().getSystemInfo()
 
 const { locale: lo } = useI18n()
 
@@ -25,20 +25,20 @@ const locale = computed(() => {
     return lo.value === 'en' ? en : zhCn
 })
 
-// useHead({
-//     title: systemInfo.value?.title,
-//     meta: [
-//         { name: 'description', content: systemInfo.value?.description },
-//         { name: 'keywords', content: systemInfo.value?.keyword },
-//     ],
-//     link: [
-//         { rel: 'icon', href: systemInfo.value?.icon },
-//     ],
-//     // bodyAttrs: {
-//     //     class: 'test',
-//     // },
-//     // script: [{ innerHTML: 'console.log(\'Hello world\')' }],
-// })
+useHead({
+    title: systemInfo.value?.title,
+    meta: [
+        { name: 'description', content: systemInfo.value?.description },
+        { name: 'keywords', content: systemInfo.value?.keyword },
+    ],
+    link: [
+        { rel: 'icon', href: systemInfo.value?.icon },
+    ],
+    // bodyAttrs: {
+    //     class: 'test',
+    // },
+    // script: [{ innerHTML: 'console.log(\'Hello world\')' }],
+})
 </script>
 
 <style lang="scss">
