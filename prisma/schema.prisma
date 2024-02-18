@@ -76,6 +76,7 @@ model Menu {
     sort     Int?    @default(0) // 排序
     title    String? @db.VarChar(100) // 菜单名称
     title_en String? @db.VarChar(100) // 菜单名称(英文)
+    status   Int?    @default(1) // 状态(1:显示, 0:隐藏)
 
     createdAt DateTime @default(now()) @map("created_at")
     updatedAt DateTime @updatedAt @map("updated_at")

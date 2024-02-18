@@ -36,10 +36,13 @@ export const getMenuList = async (event: H3Event) => {
     // const lang = useCookie<'cn' | 'en'>('i18n_redirected')
     // console.log('🚀 ~ file: page.ts:38 ~ getMenuList ~ lang:', lang)
 
+    // 获取参数
+    const param = await getEventParams<{ show: number | boolean }>(event)
+
     const where: any = {
         p_id: 0,
-        // isHide: false,
     }
+    if (param?.show) where.status = 1
 
     const res = await event.context.prisma.menu.findMany({
         where,
