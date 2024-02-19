@@ -32,7 +32,7 @@ export const useMenuState = () => {
         const { data, error } = await useCustomFetch<IMenuListResponse[]>('/api/page/get_menu', {
             method: 'post',
             body: {
-                // status: 1,
+                status: 1,
             },
         })
 
