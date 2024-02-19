@@ -34,6 +34,7 @@ declare interface IMenuListResponse {
     createdAt: Date
     updatedAt: Date
     children?: IMenuListResponse[]
+    status?: number
 }
 
 // 轮播图

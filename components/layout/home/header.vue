@@ -22,7 +22,7 @@
         <div class="header-menu">
             <div class="container">
                 <ul class="header-menu-ul flex">
-                    <li v-for="item in menuList" :key="item.id" class="flex-1">
+                    <li v-for="item in menuList.filter(i => i.status)" :key="item.id" class="flex-1">
                         <NuxtLinkLocale :to="item.href" class="header-link">
                             {{ $lang(item.title, item.title_en) }}
                         </NuxtLinkLocale>
